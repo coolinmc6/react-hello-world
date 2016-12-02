@@ -209,8 +209,8 @@ and a script tag that grabs bundle.js.  That's it.
 called 'data-reactroot'.  As the name suggests, it's probably just the div that holds ALL the 
 resulting elements...which it is.
 - Inside the 'data-reactroot' div we see the code that we've laid out in *index.jsx* which
-consists of a &gt;p&lt; tag and my created component, &gt;AwesomeComponent /&lt;
-  - The &gt;p&lt; tag is just a &gt;p&lt; tag BUT....
+consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
+  - The &lt;p&gt; tag is just a &lt;p&gt; tag BUT....
   - The <AwesomeComponent /> has the layout shown in the AwesomeComponent.jsx file:
     - div > 'Likes' span + div > buton
 - Whenever you click 'Like me', the 'Likes' number increases by one
