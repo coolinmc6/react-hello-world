@@ -22074,6 +22074,7 @@
 	
 	    _this.state = { likesCount: 0 };
 	    _this.onLike = _this.onLike.bind(_this);
+	
 	    return _this;
 	  }
 	
@@ -22082,6 +22083,8 @@
 	    value: function onLike() {
 	      var newLikesCount = this.state.likesCount + 1;
 	      this.setState({ likesCount: newLikesCount });
+	      // console.log(this.state);
+	      // console.log(this.props);
 	    }
 	  }, {
 	    key: 'render',

@@ -6,11 +6,14 @@ class AwesomeComponent extends React.Component {
     super(props);
     this.state = {likesCount : 0};
     this.onLike = this.onLike.bind(this);
+    
   }
 
   onLike () {
     let newLikesCount = this.state.likesCount + 1;
     this.setState({likesCount: newLikesCount});
+    // console.log(this.state);
+    // console.log(this.props);
   }
 
   render() {
@@ -21,6 +24,7 @@ class AwesomeComponent extends React.Component {
       </div>
     );
   }
+  
 
 }
 
