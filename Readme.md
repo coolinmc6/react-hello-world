@@ -244,14 +244,20 @@ consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
 
 ## Questions
 __1. npm init__
+
 __2. what is '-S' when installing WebPack__
+
 __3. how does the webpack.config file work? What are the basics?__
+
 __4. what is the data-reactroot attribute?__
+
 __5. why doesn't AwesomeComponent import react-dom? (just because we're not displaying it?)__
+
 __6. what does the 'export default' line do?__
 
 __7. Explain a little bit about a constructor, super(), and super(props).__
-  - source: [React ES6 class constructor super()](http://cheng.logdown.com/posts/2016/03/26/683329)
+
+source: [React ES6 class constructor super()](http://cheng.logdown.com/posts/2016/03/26/683329)
   - It is ES6 syntax to write <code>class MyClass extends React.component { ... }</code> and so you may
   be wondering...
   - **Q1**: is it necessary to call super() inside my constructor function?
@@ -264,8 +270,8 @@ __7. Explain a little bit about a constructor, super(), and super(props).__
   - **A2.** Calling super(props) is only necessary when you want to access this.props inside 
   the constructor.  In this app, I want to initialize the likesCount: 0 which may be why I need
   super(props).
-    - so what is the difference between this.state and this.props?  Here are the console.log()
-    statements from each that are fired whenever I click 'like':
+  - so what is the difference between this.state and this.props?  Here are the console.log()
+  statements from each that are fired whenever I click 'like':
     1. this.state: Object {likesCount: 2}
     2. this.props: Object {}
     3. They clearly aren't the same thing...so how is state different than props?
