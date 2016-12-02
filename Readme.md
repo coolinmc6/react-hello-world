@@ -211,7 +211,7 @@ resulting elements...which it is.
 - Inside the 'data-reactroot' div we see the code that we've laid out in *index.jsx* which
 consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
   - The &lt;p&gt; tag is just a &lt;p&gt; tag BUT....
-  - The <AwesomeComponent /> has the layout shown in the AwesomeComponent.jsx file:
+  - The &lt;AwesomeComponent /&gt; has the layout shown in the AwesomeComponent.jsx file:
     - div > 'Likes' span + div > buton
 - Whenever you click 'Like me', the 'Likes' number increases by one
 
@@ -250,16 +250,16 @@ consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
 4. what is the data-reactroot attribute?
 5. why doesn't AwesomeComponent import react-dom? (just because we're not displaying it?)
 6. what does the 'export default' line do?
-7. Explain a little bit about a constructor, super(), and super(props).
+*7. Explain a little bit about a constructor, super(), and super(props).*
   - source: [React ES6 class constructor super()](http://cheng.logdown.com/posts/2016/03/26/683329)
-  - It is ES6 syntax to write 'class MyClass extends React.component { ... }' and so you may
-  be wondering...Q1: is it necessary to call super() inside my constructor function?
+  - It is ES6 syntax to write '<code>class MyClass extends React.component { ... }<code>' and so you may
+  be wondering...**Q1**: is it necessary to call super() inside my constructor function?
   - **A1.** Calling super() is only necessary if you must have a constructor.  In other words, you do
   NOT always need to have a constructor.
     - *so when or why do I need one??  I don't know right now...*
     - calling super() is required when you have a constructor because **this** is uninitialized
     if super() is not called.
-  - Q2: So what is the difference between super() and super(props)?
+  - **Q2**: So what is the difference between super() and super(props)?
   - **A2.** Calling super(props) is only necessary when you want to access this.props inside 
   the constructor.  In this app, I want to initialize the likesCount: 0 which may be why I need
   super(props).
