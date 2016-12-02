@@ -7,8 +7,8 @@ The following work is based on the following tutorial:
 mkdir react-hello-world
 cd react-hello-world
 npm init
-npm i webpack -S
-touch webpack.config.js
+npm i webpack -S			# installs Webpack
+touch webpack.config.js 	# creates Webpack config file
 ```
 **webpack.config.js**
 ```javascript
@@ -28,12 +28,25 @@ var config = {
 
 module.exports = config;
 ```
+- APP_DIR => holds the directory path of the React app's codebase
+  - src/client/app/index.jsx
+- BUILD_DIR => represents the directory path of the bundle file output
 - Create an index.jsx file in ./src/client/app folder
 ```shell
 touch ./src/client/app/index.jsx
-./node_modules/.bin/webpack -d
+```
+**index.jsx**
+```javascript
+console.log('Hello World');
+```
+
+```shell
+# runs Webpack in development
+./node_modules/.bin/webpack -d 
+# this generates the bundle.js file and it's map file bundle.js.map
 touch src/client/index.html
 ```
+
 **index.html**
 ```html
 <html>
@@ -159,6 +172,13 @@ class App extends React.Component {
 }
 // ...
 ```
+
+
+## Questions
+1. npm init
+2. what is '-S' when installing WebPack
+3. how does the webpack.config file work? 
+  - what are the basics?
 
 
 
