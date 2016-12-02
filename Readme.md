@@ -209,8 +209,8 @@ and a script tag that grabs bundle.js.  That's it.
 called 'data-reactroot'.  As the name suggests, it's probably just the div that holds ALL the 
 resulting elements...which it is.
 - Inside the 'data-reactroot' div we see the code that we've laid out in *index.jsx* which
-consists of a <p> tag and my created component, <AwesomeComponent />
-  - The <p> tag is just a <p> tag BUT....
+consists of a &gt;p&lt; tag and my created component, &gt;AwesomeComponent /&lt;
+  - The &gt;p&lt; tag is just a &gt;p&lt; tag BUT....
   - The <AwesomeComponent /> has the layout shown in the AwesomeComponent.jsx file:
     - div > 'Likes' span + div > buton
 - Whenever you click 'Like me', the 'Likes' number increases by one
@@ -270,7 +270,7 @@ consists of a <p> tag and my created component, <AwesomeComponent />
       - They clearly aren't the same thing...so how is state different than props?
   - The big take-away for me is that if I have a constructor, which seems more likely than not
   that I will, my constructor function must requires argument props and must call super(props)
-  
+
 
 
 
