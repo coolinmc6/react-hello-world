@@ -9,9 +9,7 @@ cd react-hello-world
 npm init
 npm i webpack -S
 touch webpack.config.js
-
-
-``
+```
 **webpack.config.js**
 ```javascript
 var webpack = require('webpack');
