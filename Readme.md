@@ -33,6 +33,11 @@ module.exports = config;
 - BUILD_DIR => represents the directory path of the bundle file output
 - Create an index.jsx file in ./src/client/app folder
 ```shell
+mkdir src
+cd src
+mkdir client
+cd client/
+mkdir app
 touch ./src/client/app/index.jsx
 ```
 **index.jsx**
@@ -182,6 +187,7 @@ class AwesomeComponent extends React.Component {
 export default AwesomeComponent;
 ```
 - Update the index.jsx file to include it
+
 **index.jsx**
 ```javascript
 // ...
@@ -202,7 +208,7 @@ class App extends React.Component {
 
 ## Breakdown
 
-### HTML Elements
+### ./src/public/index.html - HTML Elements
 - The html of the page is very simple.  As index.html shows, it's just one div with id="app"
 and a script tag that grabs bundle.js.  That's it.
 - The #app div has just one other div with no idea but with what appears to be a custom attribute
@@ -215,10 +221,22 @@ consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
     - div > 'Likes' span + div > buton
 - Whenever you click 'Like me', the 'Likes' number increases by one
 
-### index.js
-- 
+### ./src/client/index.jsx
+- The file starts with importing the files / libraries that I'm going to need, starting with
+'React' and then {render} from 'React-dom' and finally my component, AwesomeComponent.jsx
+- Besides the import files, there are two main parts...there is the class definition of 'App' 
+and the render() function
+- App inherits / extends React.Component just like AwesomeComponent.
+- App has one function with is render() which returns the main div's that I mentioned above.
+- In React, you can only render one element so everything must be wrapped in a div or some
+other enclosing element.
+- It is in that div that I have my intro p-tag followed by my AwesomeComponent
+- The last part 'render(<App/>, document.getElementById('app'));' has two main parts:
+  1. the element I am rendering (I think...)
+  2. the element I am rendering it to (&lt;div id='app'&gt;&lt;/div&gt;)
 
-### AwesomeComponent.jsx
+
+### ./src/client/AwesomeComponent.jsx
 - Here is where we see what I think is ES6...
 - I believe the first 'import' line is simply stating that we need the React library
 - There are two main parts to the code:
@@ -239,6 +257,7 @@ consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
   what line 1 does ('super(props);') or line 3
   - Line 2 appears to be initializing my likesCount which I increment in the onLike() function
   and render in the render() function
+  - Line 3 -> I don't yet know what 'bind' does
 
 
 
@@ -255,19 +274,19 @@ __5. why doesn't AwesomeComponent import react-dom? (just because we're not disp
 
 __6. what does the 'export default' line do?__
 
-__7. Explain a little bit about a constructor, super(), and super(props).__
+__7. talk a little bit about a constructor, super(), and super(props).__
 
 source: [React ES6 class constructor super()](http://cheng.logdown.com/posts/2016/03/26/683329)
   - It is ES6 syntax to write <code>class MyClass extends React.component { ... }</code> and so you may
   be wondering...
-  - **Q1**: is it necessary to call super() inside my constructor function?
-  - **A1.** Calling super() is only necessary if you must have a constructor.  In other words, you do
+  - **Q1:** is it necessary to call super() inside my constructor function?
+  - **A1:** Calling super() is only necessary if you must have a constructor.  In other words, you do
   NOT always need to have a constructor.
   - so when or why do I need one??  I don't know right now...
   - calling super() is required when you have a constructor because **this** is uninitialized
     if super() is not called.
-  - **Q2**: So what is the difference between super() and super(props)?
-  - **A2.** Calling super(props) is only necessary when you want to access this.props inside 
+  - **Q2:** So what is the difference between super() and super(props)?
+  - **A2:** Calling super(props) is only necessary when you want to access this.props inside 
   the constructor.  In this app, I want to initialize the likesCount: 0 which may be why I need
   super(props).
   - so what is the difference between this.state and this.props?  Here are the console.log()
@@ -276,7 +295,10 @@ source: [React ES6 class constructor super()](http://cheng.logdown.com/posts/201
     2. this.props: Object {}
     3. They clearly aren't the same thing...so how is state different than props?
   - The big take-away for me is that if I have a constructor, which seems more likely than not
-  that I will, my constructor function must requires argument props and must call super(props)
+  that I will, my constructor function must have the argument 'props' and must call super(props)
+
+__8. what does the bind do in the constructor?__
+
 
 
 
