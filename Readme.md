@@ -243,13 +243,12 @@ consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
 
 
 ## Questions
-1. npm init
-2. what is '-S' when installing WebPack
-3. how does the webpack.config file work? 
-  - what are the basics?
-4. what is the data-reactroot attribute?
-5. why doesn't AwesomeComponent import react-dom? (just because we're not displaying it?)
-6. what does the 'export default' line do?
+__1. npm init__
+__2. what is '-S' when installing WebPack__
+__3. how does the webpack.config file work? What are the basics?__
+__4. what is the data-reactroot attribute?__
+__5. why doesn't AwesomeComponent import react-dom? (just because we're not displaying it?)__
+__6. what does the 'export default' line do?__
 
 __7. Explain a little bit about a constructor, super(), and super(props).__
   - source: [React ES6 class constructor super()](http://cheng.logdown.com/posts/2016/03/26/683329)
@@ -258,8 +257,8 @@ __7. Explain a little bit about a constructor, super(), and super(props).__
   - **Q1**: is it necessary to call super() inside my constructor function?
   - **A1.** Calling super() is only necessary if you must have a constructor.  In other words, you do
   NOT always need to have a constructor.
-    - *so when or why do I need one??  I don't know right now...*
-    - calling super() is required when you have a constructor because **this** is uninitialized
+  - so when or why do I need one??  I don't know right now...
+  - calling super() is required when you have a constructor because **this** is uninitialized
     if super() is not called.
   - **Q2**: So what is the difference between super() and super(props)?
   - **A2.** Calling super(props) is only necessary when you want to access this.props inside 
@@ -267,9 +266,9 @@ __7. Explain a little bit about a constructor, super(), and super(props).__
   super(props).
     - so what is the difference between this.state and this.props?  Here are the console.log()
     statements from each that are fired whenever I click 'like':
-      - this.state: Object {likesCount: 2}
-      - this.props: Object {}
-      - They clearly aren't the same thing...so how is state different than props?
+    1. this.state: Object {likesCount: 2}
+    2. this.props: Object {}
+    3. They clearly aren't the same thing...so how is state different than props?
   - The big take-away for me is that if I have a constructor, which seems more likely than not
   that I will, my constructor function must requires argument props and must call super(props)
 
