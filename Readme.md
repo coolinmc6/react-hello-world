@@ -252,7 +252,7 @@ consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
 6. what does the 'export default' line do?
 *7. Explain a little bit about a constructor, super(), and super(props).*
   - source: [React ES6 class constructor super()](http://cheng.logdown.com/posts/2016/03/26/683329)
-  - It is ES6 syntax to write '<code>class MyClass extends React.component { ... }<code>' and so you may
+  - It is ES6 syntax to write <code>class MyClass extends React.component { ... }</code> and so you may
   be wondering...**Q1**: is it necessary to call super() inside my constructor function?
   - **A1.** Calling super() is only necessary if you must have a constructor.  In other words, you do
   NOT always need to have a constructor.
