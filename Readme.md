@@ -250,10 +250,12 @@ consists of a &lt;p&gt; tag and my created component, &lt;AwesomeComponent /&gt;
 4. what is the data-reactroot attribute?
 5. why doesn't AwesomeComponent import react-dom? (just because we're not displaying it?)
 6. what does the 'export default' line do?
-*7. Explain a little bit about a constructor, super(), and super(props).*
+
+__7. Explain a little bit about a constructor, super(), and super(props).__
   - source: [React ES6 class constructor super()](http://cheng.logdown.com/posts/2016/03/26/683329)
   - It is ES6 syntax to write <code>class MyClass extends React.component { ... }</code> and so you may
-  be wondering...**Q1**: is it necessary to call super() inside my constructor function?
+  be wondering...
+  - **Q1**: is it necessary to call super() inside my constructor function?
   - **A1.** Calling super() is only necessary if you must have a constructor.  In other words, you do
   NOT always need to have a constructor.
     - *so when or why do I need one??  I don't know right now...*
